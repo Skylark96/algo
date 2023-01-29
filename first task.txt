@@ -1,0 +1,28 @@
+VAR
+a,b,c := INTEGER ;
+sent := STRING[];
+
+BEGAN
+
+a :=0;
+b :=1;
+c :=0;
+write("write your sentence")
+read(sent)
+
+REPEAT
+
+IF (sent[a]=" ") THEN
+b:=b+1;
+END_IF
+
+IF (sent[a] in ["a","e","u","i","o","y"]) THEN
+c:=c+1;
+END_IF
+c:=c+1;
+UNTIL (sent=".")
+
+write ("The number of words in the sentence is",b)
+write ("The number of vowels in the sentence.",c)
+
+END
